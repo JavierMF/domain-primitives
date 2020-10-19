@@ -10,7 +10,7 @@ data class Year(val year: Int) {
 
     override fun toString() = value.toString()
 
-    companion object Constants {
+    companion object {
         val MIN_YEAR = -9_000_000
         val MAX_YEAR = 3000 // Remember to update this when year 3000 is approaching
     }

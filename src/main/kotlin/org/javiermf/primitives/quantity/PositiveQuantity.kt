@@ -7,5 +7,4 @@ data class PositiveQuantity(val value: Int) {
     }
 
     override fun toString() = value.toString()
-
 }

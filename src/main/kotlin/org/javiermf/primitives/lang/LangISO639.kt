@@ -27,7 +27,7 @@ data class LangISO639(private val code: String) {
 
     override fun toString() = value
 
-    companion object Constants {
+    companion object {
         val iso639Regex = "[a-zA-Z]{2,8}".toRegex()
     }
 }
