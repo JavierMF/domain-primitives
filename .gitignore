@@ -1,0 +1,4 @@
+/.idea/
+/domain-primitives.iml
+/target/
+/src/main/kotlin/org/javiermf/primitives/lang/GenerateISO639Code.kts
