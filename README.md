@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/javiermf/domain-primitives/badge)](https://www.codefactor.io/repository/github/javiermf/domain-primitives)
+
 # domain-primitives
 A [domain primitives](http://software.sawano.se/2017/09/domain-primitives.html) library in Kotlin inspired by the concepts 
 introduced in [Secury By Design](https://www.manning.com/books/secure-by-design) book.
