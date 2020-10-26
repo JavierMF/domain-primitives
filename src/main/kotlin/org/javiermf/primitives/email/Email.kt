@@ -1,10 +1,12 @@
 package org.javiermf.primitives.email
 
+import org.javiermf.primitives.exceptions.message
+
 data class Email(private val email: String) {
 
     init {
-        require( email.length in 5..254 ) { "Email length must be between 5 and 254 " }
-        require( emailRegex matches email ) { "The string is not a valid email" }
+        require( email.length in 5..254 ) { message("Email length must be between 5 and 254") }
+        require( emailRegex matches email ) { message("The string is not a valid email") }
     }
 
     val value get() = email

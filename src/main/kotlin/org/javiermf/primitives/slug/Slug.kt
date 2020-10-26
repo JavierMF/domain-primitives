@@ -1,10 +1,12 @@
 package org.javiermf.primitives.slug
 
+import org.javiermf.primitives.exceptions.message
+
 data class Slug(private val slug: String) {
 
     init {
-        require( slug.length < 2000 ) { "Slug too long" }
-        require( slugRegex matches slug ) { "The string is not a valid slug" }
+        require( slug.length < 2000 ) { message("Slug too long") }
+        require( slugRegex matches slug ) { message("The string is not a valid slug") }
     }
 
     val value get() = slug

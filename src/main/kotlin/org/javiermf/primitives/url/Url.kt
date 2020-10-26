@@ -1,11 +1,13 @@
 package org.javiermf.primitives.url
 
+import org.javiermf.primitives.exceptions.message
+
 data class Url(private val url: String) {
 
     init {
         // Edge 16 limit https://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers
-        require(url.length < 2047) { "Url too long" }
-        require( urlRegex matches url ) { "The string is not a valid URL "}
+        require(url.length < 2047) { message("Url too long") }
+        require( urlRegex matches url ) { message("The string is not a valid URL") }
     }
 
     val value get() = url

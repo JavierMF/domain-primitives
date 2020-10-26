@@ -1,13 +1,15 @@
 package org.javiermf.primitives.lang
 
+import org.javiermf.primitives.exceptions.message
+
 data class LangISO639(private val code: String) {
 
     private val normalizedCode : String
     val description : String
 
     init {
-        require( code.length in 2..8 ) { "Language code length must be between 2 and 8 characters"}
-        require( iso639Regex matches code ) { "The string is not a valid ISO 639 language code" }
+        require( code.length in 2..8 ) { message("Language code length must be between 2 and 8 characters") }
+        require( iso639Regex matches code ) { message("The string is not a valid ISO 639 language code") }
 
         val lowerCasedCode = code.toLowerCase()
 

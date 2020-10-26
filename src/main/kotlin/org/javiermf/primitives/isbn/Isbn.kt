@@ -1,5 +1,7 @@
 package org.javiermf.primitives.isbn
 
+import org.javiermf.primitives.exceptions.message
+
 data class Isbn(val isbn: String) {
 
     val value: String = isbn.trim().replace("-", "").replace(" ", "")
@@ -7,8 +9,8 @@ data class Isbn(val isbn: String) {
     val original = isbn
 
     init {
-        require(value.length in setOf(10, 13)) { "The isbn has not the proper length (10 or 13)" }
-        require( isValid(value) ){ "The isbn is invalid" }
+        require(value.length in setOf(10, 13)) { message("The isbn has not the proper length (10 or 13)") }
+        require( isValid(value) ){ message("The isbn is invalid") }
     }
 
     override fun toString() = original
