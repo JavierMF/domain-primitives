@@ -42,3 +42,12 @@ always be incomplete so I will be adding new ones when I need it or feel it. Con
 * [PositiveQuantity](src/main/kotlin/org/javiermf/primitives/quantity/PositiveQuantity.kt)
   * value greater or equal than 0
   
+* [SHA1Hash](src/main/kotlin/org/javiermf/primitives/auth/SHA1Hash.kt)
+  * value length is 40
+  * value matches regular expression [0-9a-f]{40}
+  
+* [ExceptionMessage](src/main/kotlin/org/javiermf/primitives/exceptions/ExceptionMessage.kt)
+  * value is not blank
+  * value matches regular expression [\w ,.:_\t-]+
+ 
+  
